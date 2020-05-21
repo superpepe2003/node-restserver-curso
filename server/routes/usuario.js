@@ -8,9 +8,9 @@ const { verificaToken, verificaAdminRol } = require('../middlewares/autenticacio
 const app = express();
 
 
-app.get('/', function (req, res) {
-    res.json('Hello World')
-  });
+// app.get('/', function (req, res) {
+//     res.json('Hello World')
+//   });
   
 app.get('/usuario', verificaToken ,( req,res ) => {
 
