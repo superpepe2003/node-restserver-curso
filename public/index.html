@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Google Sign-In Demo</title>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="483567341192-udqahmiphpuj71p3vmiehuv5a7n307f8.apps.googleusercontent.com">
 </head>
 <body>
+
+    <!-- <img src="http://localhost:3000/imagen/productos/5ec9ceca71209d03cf31b985-708.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJVU0VSX1JPTEUiLCJlc3RhZG8iOnRydWUsImdvb2dsZSI6ZmFsc2UsIl9pZCI6IjVlYzAzNzczMGE4YzBiMDM1NmRjMWRjNyIsIm5vbWJyZSI6IlRlc3QgMiIsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwiX192IjowfSwiaWF0IjoxNTkwNDU5MDI5LCJleHAiOjE1OTA2MzE4Mjl9.GEoIVrBDGwNhtL9VII9EWR586BeJXRLR_Zd5Civ8vhY" alt=""> -->
+
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
     <a href="#" onclick="signOut();">Sign out</a>
@@ -18,7 +21,7 @@
             var profile = googleUser.getBasicProfile();
 
             var id_token = googleUser.getAuthResponse().id_token;
-            
+
             var xhr = new XMLHttpRequest();
             xhr.open('POST', '/google');
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
